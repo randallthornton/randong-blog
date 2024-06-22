@@ -1,9 +1,12 @@
 import { Component, signal } from '@angular/core';
+import { MatButtonModule } from '@angular/material/button';
 
 @Component({
   selector: 'app-home',
   standalone: true,
   template: `
+    <a href="./hello">Hello</a>
+    <a href="./about"> About</a>
     <div>
       <a href="https://analogjs.org/" target="_blank">
         <img alt="Analog Logo" class="logo analog" src="/analog.svg" />
@@ -15,7 +18,14 @@ import { Component, signal } from '@angular/core';
     <h3>The fullstack meta-framework for Angular!</h3>
 
     <div class="card">
-      <button type="button" (click)="increment()">Count {{ count() }}</button>
+      <button
+        mat-raised-button
+        type="button"
+        (click)="increment()"
+        color="primary"
+      >
+        Count {{ count() }}
+      </button>
     </div>
 
     <p class="read-the-docs">
@@ -36,6 +46,7 @@ import { Component, signal } from '@angular/core';
       }
     `,
   ],
+  imports: [MatButtonModule],
 })
 export default class HomeComponent {
   count = signal(0);

@@ -1,0 +1,211 @@
+{
+  "version": "6.0",
+  "nxVersion": "19.3.1",
+  "deps": {
+    "@analogjs/content": "^1.5.0",
+    "@analogjs/router": "^1.5.0",
+    "@angular/animations": "^18.0.0",
+    "@angular/cdk": "^18.0.4",
+    "@angular/common": "^18.0.0",
+    "@angular/compiler": "^18.0.0",
+    "@angular/core": "^18.0.0",
+    "@angular/forms": "^18.0.0",
+    "@angular/material": "^18.0.4",
+    "@angular/platform-browser": "^18.0.0",
+    "@angular/platform-browser-dynamic": "^18.0.0",
+    "@angular/platform-server": "^18.0.0",
+    "@angular/router": "^18.0.0",
+    "front-matter": "^4.0.2",
+    "marked": "^5.0.2",
+    "marked-gfm-heading-id": "^3.1.0",
+    "marked-highlight": "^2.0.1",
+    "marked-mangle": "^1.1.7",
+    "prismjs": "^1.29.0",
+    "rxjs": "~7.8.0",
+    "tslib": "^2.3.0",
+    "zone.js": "~0.14.3",
+    "@analogjs/platform": "^1.5.0",
+    "@analogjs/vite-plugin-angular": "^1.5.0",
+    "@angular-devkit/build-angular": "^18.0.0",
+    "@angular/cli": "^18.0.0",
+    "@angular/compiler-cli": "^18.0.0",
+    "autoprefixer": "^10.4.14",
+    "jsdom": "^22.0.0",
+    "postcss": "^8.4.21",
+    "tailwindcss": "^3.3.1",
+    "typescript": "~5.4.2",
+    "vite": "^5.0.0",
+    "vite-tsconfig-paths": "^4.2.0",
+    "vitest": "^1.3.1"
+  },
+  "pathMappings": {},
+  "nxJsonPlugins": [],
+  "fileMap": {
+    "projectFileMap": {
+      "my-app": [
+        {
+          "file": ".editorconfig",
+          "hash": "6686520031028425313"
+        },
+        {
+          "file": ".gitignore",
+          "hash": "6955780978526089789"
+        },
+        {
+          "file": ".vscode/extensions.json",
+          "hash": "5331566439708925252"
+        },
+        {
+          "file": ".vscode/launch.json",
+          "hash": "5740229655140819458"
+        },
+        {
+          "file": ".vscode/tasks.json",
+          "hash": "5336636969995539451"
+        },
+        {
+          "file": "README.md",
+          "hash": "5828522625051473824"
+        },
+        {
+          "file": "angular.json",
+          "hash": "8668029532308767223"
+        },
+        {
+          "file": "index.html",
+          "hash": "4806153490344661349"
+        },
+        {
+          "file": "package-lock.json",
+          "hash": "9617270032156013925"
+        },
+        {
+          "file": "package.json",
+          "hash": "12185471713519449107",
+          "deps": [
+            "npm:@analogjs/platform",
+            "npm:@analogjs/vite-plugin-angular",
+            "npm:@angular-devkit/build-angular",
+            "npm:@angular/cli",
+            "npm:@angular/compiler-cli",
+            "npm:autoprefixer",
+            "npm:jsdom",
+            "npm:postcss",
+            "npm:tailwindcss",
+            "npm:typescript",
+            "npm:vite",
+            "npm:vite-tsconfig-paths",
+            "npm:vitest",
+            "npm:@analogjs/content",
+            "npm:@analogjs/router",
+            "npm:@angular/animations",
+            "npm:@angular/cdk",
+            "npm:@angular/common",
+            "npm:@angular/compiler",
+            "npm:@angular/core",
+            "npm:@angular/forms",
+            "npm:@angular/material",
+            "npm:@angular/platform-browser",
+            "npm:@angular/platform-browser-dynamic",
+            "npm:@angular/platform-server",
+            "npm:@angular/router",
+            "npm:front-matter",
+            "npm:marked",
+            "npm:marked-gfm-heading-id",
+            "npm:marked-highlight",
+            "npm:marked-mangle",
+            "npm:prismjs",
+            "npm:rxjs",
+            "npm:tslib",
+            "npm:zone.js"
+          ]
+        },
+        {
+          "file": "postcss.config.cjs",
+          "hash": "8055263870272897227"
+        },
+        {
+          "file": "public/.gitkeep",
+          "hash": "3244421341483603138"
+        },
+        {
+          "file": "public/analog.svg",
+          "hash": "6818299202422618947"
+        },
+        {
+          "file": "public/favicon.ico",
+          "hash": "3464744996580215640"
+        },
+        {
+          "file": "public/vite.svg",
+          "hash": "16046085400642193116"
+        },
+        {
+          "file": "src/app/app.component.spec.ts",
+          "hash": "1520752516341588791"
+        },
+        {
+          "file": "src/app/app.component.ts",
+          "hash": "12141239141774520787"
+        },
+        {
+          "file": "src/app/app.config.server.ts",
+          "hash": "6206404401464630606"
+        },
+        {
+          "file": "src/app/app.config.ts",
+          "hash": "1895481862089259972"
+        },
+        {
+          "file": "src/app/pages/index.page.ts",
+          "hash": "2861135328641788881"
+        },
+        {
+          "file": "src/main.server.ts",
+          "hash": "13181532500356347118"
+        },
+        {
+          "file": "src/main.ts",
+          "hash": "655933164093774729"
+        },
+        {
+          "file": "src/server/routes/v1/hello.ts",
+          "hash": "6815338784489944959"
+        },
+        {
+          "file": "src/styles.scss",
+          "hash": "5435315873897996617"
+        },
+        {
+          "file": "src/test-setup.ts",
+          "hash": "11654554698165859908"
+        },
+        {
+          "file": "src/vite-env.d.ts",
+          "hash": "12946363841406869089"
+        },
+        {
+          "file": "tailwind.config.cjs",
+          "hash": "5743394056513773646"
+        },
+        {
+          "file": "tsconfig.app.json",
+          "hash": "2068990542920232196"
+        },
+        {
+          "file": "tsconfig.json",
+          "hash": "2887495124295208680"
+        },
+        {
+          "file": "tsconfig.spec.json",
+          "hash": "16538352283161566282"
+        },
+        {
+          "file": "vite.config.ts",
+          "hash": "553558781396615664"
+        }
+      ]
+    },
+    "nonProjectFiles": []
+  }
+}
