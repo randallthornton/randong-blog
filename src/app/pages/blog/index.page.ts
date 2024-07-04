@@ -1,13 +1,14 @@
 import { Component } from '@angular/core';
+import { RouterModule } from '@angular/router';
 
 export const RouteMetadata = {};
 
 @Component({
   standalone: true,
-  imports: [],
+  imports: [RouterModule],
   template: `
     <p>index page works!!</p>
-    <routerOutlet></routerOutlet>
+    <router-outlet></router-outlet>
   `,
 })
 export default class IndexPage {}

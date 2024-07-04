@@ -3,6 +3,8 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { RouterModule } from '@angular/router';
 @Component({
   selector: 'app-home',
   standalone: true,
@@ -30,7 +32,14 @@ import { MatListModule } from '@angular/material/list';
     </mat-sidenav-container>
   `,
   styles: [``],
-  imports: [MatButtonModule, MatSidenavModule, MatIconModule, MatListModule],
+  imports: [
+    MatButtonModule,
+    MatSidenavModule,
+    MatIconModule,
+    MatListModule,
+    MatToolbarModule,
+    RouterModule,
+  ],
 })
 export default class HomeComponent {
   count = signal(0);
