@@ -1,20 +1,64 @@
-import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { Component, signal } from '@angular/core';
+import { MatButtonModule } from '@angular/material/button';
+import { MatIconModule } from '@angular/material/icon';
+import { MatListModule } from '@angular/material/list';
+import { MatDrawerMode, MatSidenavModule } from '@angular/material/sidenav';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { RouterModule } from '@angular/router';
+import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
+import { tap } from 'rxjs';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet],
-  template: ` <router-outlet></router-outlet> `,
-  styles: [
-    `
-      :host {
-        max-width: 1280px;
-        margin: 0 auto;
-        padding: 2rem;
-        text-align: center;
-      }
-    `,
+  template: `
+    <mat-sidenav-container fullscreen matAppBackground>
+      <mat-sidenav [mode]="sidenavMode()" #sidenav>
+        <mat-nav-list>
+          <a mat-list-item routerLink="/blog" (click)="sidenav.close()">Blog</a>
+          <a mat-list-item routerLink="/about" (click)="sidenav.close()"
+            >About</a
+          >
+        </mat-nav-list>
+      </mat-sidenav>
+      <mat-sidenav-content>
+        <mat-toolbar color="primary" class="flex gap-4">
+          <button
+            mat-icon-button
+            (click)="sidenav.toggle()"
+            aria-label="Toggle sidenav"
+          >
+            <mat-icon>menu</mat-icon>
+          </button>
+          <div>Randong</div>
+        </mat-toolbar>
+        <router-outlet></router-outlet>
+      </mat-sidenav-content>
+    </mat-sidenav-container>
+  `,
+  styles: [``],
+  imports: [
+    MatButtonModule,
+    MatSidenavModule,
+    MatIconModule,
+    MatListModule,
+    MatToolbarModule,
+    RouterModule,
   ],
 })
-export class AppComponent {}
+export class AppComponent {
+  sidenavMode = signal<MatDrawerMode>('over');
+
+  constructor(breakpointObserver: BreakpointObserver) {
+    breakpointObserver
+      .observe([Breakpoints.Medium])
+      .pipe(
+        tap((result) => {
+          result.matches
+            ? this.sidenavMode.set('side')
+            : this.sidenavMode.set('over');
+        })
+      )
+      .subscribe();
+  }
+}
