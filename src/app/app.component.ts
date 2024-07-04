@@ -14,12 +14,17 @@ import { tap } from 'rxjs';
   template: `
     <mat-sidenav-container fullscreen matAppBackground>
       <mat-sidenav [mode]="sidenavMode()" #sidenav>
-        <mat-nav-list>
-          <a mat-list-item routerLink="/blog" (click)="sidenav.close()">Blog</a>
-          <a mat-list-item routerLink="/about" (click)="sidenav.close()"
-            >About</a
-          >
-        </mat-nav-list>
+        <div class="flex flex-col justify-center">
+          <img src="icon.svg" alt="Logo" class="w-full" />
+          <mat-nav-list class="mt-4">
+            <a mat-list-item routerLink="/blog" (click)="sidenav.close()"
+              >Blog</a
+            >
+            <a mat-list-item routerLink="/about" (click)="sidenav.close()"
+              >About</a
+            >
+          </mat-nav-list>
+        </div>
       </mat-sidenav>
       <mat-sidenav-content>
         <mat-toolbar color="primary" class="flex gap-4">
