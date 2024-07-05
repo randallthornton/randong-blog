@@ -9,14 +9,17 @@ import PostAttributes from '../../post-attributes';
   standalone: true,
   imports: [AsyncPipe, MarkdownComponent],
   template: `
+    @if (post$ | async; as post) {
+    <img
+      [src]="post.attributes.coverImage"
+      [className]="post.attributes.coverImageClassName"
+    />
     <div class="px-4">
-      @if (post$ | async; as post) {
       <article>
-        <img class="max-h-[40vh]" [src]="post.attributes.coverImage" />
         <analog-markdown [content]="post.content" />
       </article>
-      }
     </div>
+    }
   `,
   styles: [],
 })
