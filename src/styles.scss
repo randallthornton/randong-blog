@@ -1,4 +1,7 @@
 @use "@angular/material" as mat;
+@use "./appm3-theme" as m3-theme;
+@use "./manual-theme" as manual-theme;
+
 @include mat.core();
 
 /* Tailwind directives  */
@@ -6,43 +9,31 @@
 @tailwind components;
 @tailwind utilities;
 
-$theme: mat.define-theme(
-  (
-    color: (
-      theme-type: light,
-      primary: mat.$spring-green-palette,
-      tertiary: mat.$violet-palette,
-    ),
-  )
-);
-
-$dark-theme: mat.define-theme(
-  (
-    color: (
-      theme-type: dark,
-      primary: mat.$spring-green-palette,
-      tertiary: mat.$violet-palette,
-    ),
-  )
-);
-
-html {
-  @include mat.all-component-themes($theme);
-
-  @media (prefers-color-scheme: dark) {
-    @include mat.all-component-themes($dark-theme);
-  }
-}
+/* Angular Material Theme */
+@include mat.core();
 
 body {
-  font-family: Roboto, "Helvetica Neue", sans-serif;
-  margin: 0;
-  padding: 0;
+  // @include mat.all-component-themes(m3-theme.$light-theme);
+  // @include mat.color-variants-backwards-compatibility(m3-theme.$light-theme);
+  // @include mat.typography-hierarchy(m3-theme.$light-theme, $back-compat: true);
+
+  // @media (prefers-color-scheme: dark) {
+  //   @include mat.all-component-colors(m3-theme.$dark-theme);
+  // }
+
+  @include mat.all-component-themes(manual-theme.$my-theme);
+  @include mat.color-variants-backwards-compatibility(manual-theme.$my-theme);
+  @include mat.typography-hierarchy(manual-theme.$my-theme, $back-compat: true);
+
+  @media (prefers-color-scheme: dark) {
+    @include mat.all-component-colors(manual-theme.$my-theme-dark);
+  }
+
 }
 
 html,
 body {
   height: 100%;
+  margin: 0;
+  padding: 0;
 }
-
-@include mat.color-variants-backwards-compatibility($theme);

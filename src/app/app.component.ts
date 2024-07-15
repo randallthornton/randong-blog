@@ -12,7 +12,7 @@ import { tap } from 'rxjs';
   selector: 'app-root',
   standalone: true,
   template: `
-    <mat-sidenav-container fullscreen matAppBackground>
+    <mat-sidenav-container fullscreen>
       <mat-sidenav [mode]="sidenavMode()" #sidenav>
         <div class="flex flex-col justify-center">
           <img src="icon.svg" alt="Logo" class="w-full" />
@@ -27,9 +27,10 @@ import { tap } from 'rxjs';
         </div>
       </mat-sidenav>
       <mat-sidenav-content>
-        <mat-toolbar color="primary" class="flex gap-4">
+        <mat-toolbar class="flex gap-4 primary-toolbar">
           <button
             mat-icon-button
+            color="primary"
             (click)="sidenav.toggle()"
             aria-label="Toggle sidenav"
           >
@@ -41,7 +42,17 @@ import { tap } from 'rxjs';
       </mat-sidenav-content>
     </mat-sidenav-container>
   `,
-  styles: [``],
+  styles: [
+    `
+    @use '@angular/material' as mat;
+
+    $theme: 
+    
+      .primary-toolbar {
+        @include mat.toolbar-color($primary);
+      }
+    `,
+  ],
   imports: [
     MatButtonModule,
     MatSidenavModule,

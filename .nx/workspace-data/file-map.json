@@ -45,43 +45,43 @@
       "my-app": [
         {
           "file": ".editorconfig",
-          "hash": "6686520031028425313"
+          "hash": "17241496168097493888"
         },
         {
           "file": ".gitignore",
-          "hash": "6955780978526089789"
+          "hash": "5735676071040335285"
         },
         {
           "file": ".vscode/extensions.json",
-          "hash": "5331566439708925252"
+          "hash": "11934160580685414355"
         },
         {
           "file": ".vscode/launch.json",
-          "hash": "5740229655140819458"
+          "hash": "10433428075756508976"
         },
         {
           "file": ".vscode/tasks.json",
-          "hash": "5336636969995539451"
+          "hash": "10093397977228577162"
         },
         {
           "file": "README.md",
-          "hash": "5828522625051473824"
+          "hash": "15391940211569016368"
         },
         {
           "file": "angular.json",
-          "hash": "8668029532308767223"
+          "hash": "15359405342879368173"
         },
         {
           "file": "index.html",
-          "hash": "4806153490344661349"
+          "hash": "17800148874507158156"
         },
         {
           "file": "package-lock.json",
-          "hash": "9617270032156013925"
+          "hash": "9194606752114909946"
         },
         {
           "file": "package.json",
-          "hash": "12185471713519449107",
+          "hash": "12588405919379558509",
           "deps": [
             "npm:@analogjs/platform",
             "npm:@analogjs/vite-plugin-angular",
@@ -121,8 +121,12 @@
           ]
         },
         {
+          "file": "pnpm-lock.yaml",
+          "hash": "11694395979667039303"
+        },
+        {
           "file": "postcss.config.cjs",
-          "hash": "8055263870272897227"
+          "hash": "16750483254333733706"
         },
         {
           "file": "public/.gitkeep",
@@ -130,79 +134,103 @@
         },
         {
           "file": "public/analog.svg",
-          "hash": "6818299202422618947"
+          "hash": "13012384138422494597"
         },
         {
-          "file": "public/favicon.ico",
-          "hash": "3464744996580215640"
+          "file": "public/favicon.png",
+          "hash": "18272564379243773927"
         },
         {
-          "file": "public/vite.svg",
-          "hash": "16046085400642193116"
+          "file": "public/icon.svg",
+          "hash": "2443421430219541910"
         },
         {
           "file": "src/app/app.component.spec.ts",
-          "hash": "1520752516341588791"
+          "hash": "12851740448900034529"
         },
         {
           "file": "src/app/app.component.ts",
-          "hash": "12141239141774520787"
+          "hash": "15792858473235927935"
         },
         {
           "file": "src/app/app.config.server.ts",
-          "hash": "6206404401464630606"
+          "hash": "1028852278249083218"
         },
         {
           "file": "src/app/app.config.ts",
-          "hash": "1895481862089259972"
+          "hash": "11550567353733885723"
         },
         {
-          "file": "src/app/pages/index.page.ts",
-          "hash": "2861135328641788881"
+          "file": "src/app/pages/about.md",
+          "hash": "575025435512264926"
+        },
+        {
+          "file": "src/app/pages/blog/[slug].page.ts",
+          "hash": "12316751092977998415"
+        },
+        {
+          "file": "src/app/pages/blog/index.page.ts",
+          "hash": "13267466008340416371"
+        },
+        {
+          "file": "src/app/post-attributes.ts",
+          "hash": "8484354269850059688"
+        },
+        {
+          "file": "src/appm3-theme.scss",
+          "hash": "10134670106799398673"
+        },
+        {
+          "file": "src/content/first-actual-post.md",
+          "hash": "6637750085745071346"
+        },
+        {
+          "file": "src/m3-theme.scss",
+          "hash": "8253974690747727822"
         },
         {
           "file": "src/main.server.ts",
-          "hash": "13181532500356347118"
+          "hash": "4102007581075913414"
         },
         {
           "file": "src/main.ts",
-          "hash": "655933164093774729"
+          "hash": "4777456825797252601"
         },
         {
           "file": "src/server/routes/v1/hello.ts",
-          "hash": "6815338784489944959"
+          "hash": "16962955015765784515"
         },
         {
           "file": "src/styles.scss",
-          "hash": "5435315873897996617"
+          "hash": "4498787526199652559"
         },
         {
           "file": "src/test-setup.ts",
-          "hash": "11654554698165859908"
+          "hash": "2699278492640924040"
         },
         {
           "file": "src/vite-env.d.ts",
-          "hash": "12946363841406869089"
+          "hash": "7856441258253745083"
         },
         {
           "file": "tailwind.config.cjs",
-          "hash": "5743394056513773646"
+          "hash": "15436317572919484915"
         },
         {
           "file": "tsconfig.app.json",
-          "hash": "2068990542920232196"
+          "hash": "6273067195533602844"
         },
         {
           "file": "tsconfig.json",
-          "hash": "2887495124295208680"
+          "hash": "6173037111123677721"
         },
         {
           "file": "tsconfig.spec.json",
-          "hash": "16538352283161566282"
+          "hash": "6024032379332601761"
         },
         {
           "file": "vite.config.ts",
-          "hash": "553558781396615664"
+          "hash": "544076999258132418"
         }
       ]
     },
