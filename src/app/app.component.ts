@@ -7,6 +7,7 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { RouterModule } from '@angular/router';
 import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
 import { tap } from 'rxjs';
+import { DarkModeService } from './services/dark-mode.service';
 
 @Component({
   selector: 'app-root',
@@ -37,6 +38,11 @@ import { tap } from 'rxjs';
             <mat-icon>menu</mat-icon>
           </button>
           <div>Randong</div>
+
+          <div class="flex-1"></div>
+          <button mat-icon-button color="primary" (click)="toggleDarkMode()">
+            <mat-icon>{{ isDarkMode() ? 'light_mode' : 'dark_mode' }}</mat-icon>
+          </button>
         </mat-toolbar>
         <router-outlet></router-outlet>
       </mat-sidenav-content>
@@ -44,11 +50,9 @@ import { tap } from 'rxjs';
   `,
   styles: [
     `
-    @use '@angular/material' as mat;
+      @use '@angular/material' as mat;
 
-    $theme: 
-    
-      .primary-toolbar {
+      $theme: .primary-toolbar {
         @include mat.toolbar-color($primary);
       }
     `,
@@ -61,11 +65,16 @@ import { tap } from 'rxjs';
     MatToolbarModule,
     RouterModule,
   ],
+  providers: [DarkModeService],
 })
 export class AppComponent {
   sidenavMode = signal<MatDrawerMode>('over');
+  isDarkMode = this.darkMode.darkMode;
 
-  constructor(breakpointObserver: BreakpointObserver) {
+  constructor(
+    breakpointObserver: BreakpointObserver,
+    private darkMode: DarkModeService
+  ) {
     breakpointObserver
       .observe([Breakpoints.Medium])
       .pipe(
@@ -76,5 +85,9 @@ export class AppComponent {
         })
       )
       .subscribe();
+  }
+
+  toggleDarkMode() {
+    this.darkMode.toggleDarkMode();
   }
 }

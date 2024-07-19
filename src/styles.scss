@@ -11,19 +11,18 @@
 $light-theme: m3-theme.$light-theme;
 $dark-theme: m3-theme.$dark-theme;
 
-body {
+:root {
   @include mat.all-component-themes($light-theme);
   @include mat.color-variants-backwards-compatibility($light-theme);
   @include mat.typography-hierarchy($light-theme, $back-compat: true);
 
-  @media (prefers-color-scheme: dark) {
+  .dark {
     @include mat.all-component-colors($dark-theme);
   }
 }
 
 html,
 body {
-  height: 100%;
   margin: 0;
   padding: 0;
 }
